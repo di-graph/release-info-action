@@ -1,0 +1,25 @@
+name: 'Digraph Get Release Info'
+description: 'Parse out release information details from Digraph release notification PR file'
+author: 'Digraph'
+inputs:
+  file_path:
+    required: true
+    description: 'Path to Digraph generated release notification file. In the format `.digraph/repository_release_tag.yaml`'
+outputs:
+  repository_name:
+    description: 'The repository where the release happened'
+  new_major_version:
+    description: 'The major version of the current release'
+  new_minor_version:
+    description: 'The minor version of the current release'
+  new_patch_version:
+    description: 'The patch version of the current release'
+  previous_major_version:
+    description: 'The major version of the immediately preceding release'
+  previous_minor_version:
+    description: 'The minor version of the immediately preceding release'
+  previous_patch_version:
+    description: 'The patch version of the immediately preceding release'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
