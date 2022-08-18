@@ -7,13 +7,13 @@ async function run() {
     let filePath, fileContents;
     try {
         filePath = core.getInput('file_path');
-        core.debug(`filePath: ${filePath}`)
+        core.debug(`filePath: ${filePath}`);
 
         if (filePath) {
             try {
                 fileContents =  await fs.readFile(path.resolve(filePath), 'utf-8');
             } catch (error) {
-                console.error(error)
+                console.error(error);
                 throw new Error(`The provided file path for Digraph release PR file may be incorrect. File is: ${filePath}`);
             }
         }
@@ -23,7 +23,7 @@ async function run() {
             try {
                 fileContents = YAML.parse(fileContents);
             } catch (error) {
-                console.error('File contents is invalid YAML');
+                console.error(error);
                 throw new Error('File contents is invalid YAML')
             }
         }
