@@ -22,4 +22,4 @@ outputs:
     description: 'The patch version of the immediately preceding release'
 runs:
   using: 'node12'
-  main: 'src/index.js'
+  main: 'dist/index.js'
