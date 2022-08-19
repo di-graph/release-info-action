@@ -2,7 +2,7 @@
   "name": "release-info-action",
   "version": "1.0.0",
   "description": "Github action that parses out release information details from Digraph release notification PR file.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
