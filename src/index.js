@@ -28,7 +28,7 @@ async function run() {
             }
         }
 
-        core.setOutput('repository', fileContents['repository'])
+        core.setOutput('repository_name', fileContents['repository'])
         core.setOutput('new_major_version', fileContents['new_major_version'])
         core.setOutput('new_minor_version', fileContents['new_minor_version'])
         core.setOutput('new_patch_version', fileContents['new_patch_version'])
