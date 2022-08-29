@@ -2,9 +2,10 @@
   "name": "release-info-action",
   "version": "1.0.0",
   "description": "Github action that parses out release information details from Digraph release notification PR file.",
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "npm install @actions/core && npm install @actions/github && npm install fs && npm install path && npm install yaml"
   },
   "repository": {
     "type": "git",
